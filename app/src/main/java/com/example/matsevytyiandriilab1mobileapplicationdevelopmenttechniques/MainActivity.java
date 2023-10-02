@@ -18,11 +18,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Initializing
-
+        Button btnChangeColor = findViewById(R.id.btnChangeColor);
         Button btnChangeText = (Button) findViewById(R.id.btnChangeText);
         this.textView = findViewById(R.id.textView);
 
         // Changing the color
+        btnChangeColor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textView.setTextColor(Color.parseColor("RED"));
+            }
+        });
+
 
 
         btnChangeText.setOnClickListener(new View.OnClickListener() {
